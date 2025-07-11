@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Camp - Professional Bio Timeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #000000;
+            box-shadow: 0 0 30px rgba(140, 146, 151, 0.3);
+            border: 1px solid #8c9297;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 4px solid #8c9297;
+        }
+
+        .header h1 {
+            font-size: 3.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #8c9297;
+            margin-bottom: 40px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px 15px;
+            background: rgba(140, 146, 151, 0.1);
+            border: 2px solid #8c9297;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            background: rgba(140, 146, 151, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .stat-value {
+            font-size: 2.4em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+            color: #8c9297;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #ccc;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #8c9297, #a8b0b8);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 25px 0;
+            opacity: 0;
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+        .timeline-item:nth-child(5) { animation-delay: 1.0s; }
+
+        .timeline-content {
+            position: relative;
+            width: 48%;
+            padding: 25px;
+            background: #000000;
+            border: 2px solid #8c9297;
+            box-shadow: 0 8px 25px rgba(140, 146, 151, 0.2);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(140, 146, 151, 0.3);
+            border-color: #a8b0b8;
+            z-index: 3;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 52%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #8c9297, #a8b0b8);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid #000000;
+            box-shadow: 0 0 0 3px rgba(140, 146, 151, 0.3);
+            z-index: 4;
+        }
+
+        .year {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #8c9297;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .year::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(90deg, #8c9297, #a8b0b8);
+        }
+
+        .position {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .company {
+            font-size: 1.4em;
+            color: #8c9297;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-style: normal;
+        }
+
+        .achievements {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .achievements li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #dddddd;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .achievements li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #8c9297;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+
+        .education {
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+            color: white;
+            border: 2px solid #8c9297 !important;
+        }
+
+        .education .year {
+            color: #8c9297;
+        }
+
+        .education .year::before {
+            background: linear-gradient(90deg, #8c9297, #a8b0b8);
+        }
+
+        .education .position,
+        .education .company {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .education .achievements li {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .education .achievements li::before {
+            color: #8c9297;
+        }
+
+        .metrics {
+            background: #1a1a1a;
+            color: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-left: 4px solid #8c9297;
+            border: 2px solid #8c9297;
+        }
+
+        .metrics-title {
+            font-size: 1.0em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #8c9297;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(140, 146, 151, 0.1);
+            border: 1px solid #8c9297;
+            transition: all 0.3s ease;
+        }
+
+        .metric-item:hover {
+            background: rgba(140, 146, 151, 0.2);
+        }
+
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+            color: #8c9297;
+        }
+
+        .metric-label {
+            font-size: 0.8em;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .signature-line {
+            text-align: center;
+            margin: 40px;
+            padding: 30px;
+            border-top: 2px solid #8c9297;
+            font-style: italic;
+            color: #cccccc;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .header-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .stat-item {
+                padding: 20px 15px;
+            }
+            
+            .stat-value {
+                font-size: 2.2em;
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Andy Camp</h1>
+            <div class="subtitle">Executive Leadership | Financial Engineering | Strategic Growth</div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-value">$3.5B+</span>
+                    <span class="stat-label">Revenue Managed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">880%</span>
+                    <span class="stat-label">Peak Growth</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$1B+</span>
+                    <span class="stat-label">Credit Secured</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Zero</span>
+                    <span class="stat-label">Investor Losses</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content education">
+                    <div class="year">2005-2009</div>
+                    <div class="position">BSc Chemical Engineering</div>
+                    <div class="company">University of Illinois at Urbana-Champaign</div>
+                    <ul class="achievements">
+                        <li>Minor in Technology & Management</li>
+                        <li>Foundation in process optimization and analytical problem-solving</li>
+                        <li>Developed quantitative and systems thinking capabilities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="year">2009-2012</div>
+                    <div class="position">Lead Asset Economist</div>
+                    <div class="company">BP Global Trading</div>
+                    <div class="metrics">
+                        <div class="metrics-title">Performance Metrics</div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-value">$0.20</span>
+                                <span class="metric-label">Record Margin/Gal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed proprietary blending model for global distillates achieving record profit margin</li>
+                        <li>Created chartering optimization algorithms for direct vessel procurement</li>
+                        <li>Optimized crude oil slates across multiple refineries</li>
+                        <li>Applied advanced analytics to improve operational efficiency</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="year">2013-2020</div>
+                    <div class="position">Founding Executive / Lead Trader / COO</div>
+                    <div class="company">Tethys Oil Trading</div>
+                    <div class="metrics">
+                        <div class="metrics-title">Financial Achievements</div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-value">$1.5B</span>
+                                <span class="metric-label">Annual Revenue</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">$1B</span>
+                                <span class="metric-label">Credit Facility</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">$45M</span>
+                                <span class="metric-label">Blending Credit</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Managed $1.5B in annual revenue across global trading operations</li>
+                        <li>Secured $1B credit facility from leading private equity firm</li>
+                        <li>Designed gasoline blending program and proprietary trading platform</li>
+                        <li>Led trading, operations, and systems development initiatives</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="year">2020-2023</div>
+                    <div class="position">Chief Financial Officer / Chief Operating Officer</div>
+                    <div class="company">SA Services International</div>
+                    <div class="metrics">
+                        <div class="metrics-title">Strategic Results</div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-value">880%</span>
+                                <span class="metric-label">Income Growth</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">$23M</span>
+                                <span class="metric-label">Peak Revenue</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">$1B</span>
+                                <span class="metric-label">Credit Lines</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">#2</span>
+                                <span class="metric-label">Global Position</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Transformed company into world's 2nd largest sulfuric acid trader</li>
+                        <li>Delivered 880% income growth ($2.6M to $23M) in two years</li>
+                        <li>Negotiated $1B credit facilities from global banking consortium</li>
+                        <li>Directed financial strategy, forecasting, and risk management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="year">2023-Present</div>
+                    <div class="position">Founder / Chief Executive Officer</div>
+                    <div class="company">Proteus Supply and Trading</div>
+                    <div class="metrics">
+                        <div class="metrics-title">Current Performance</div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <span class="metric-value">&lt;12</span>
+                                <span class="metric-label">Months to Profit</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">Zero</span>
+                                <span class="metric-label">Investor Losses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Achieved profitability in record time under 12 months</li>
+                        <li>Built bunker fuel business servicing Florida and Atlantic Coast</li>
+                        <li>Expanding presence in global marine fuel markets</li>
+                        <li>Maintains perfect track record across all portfolio companies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature-line">
+            "Delivering High-Yield, Low-Risk Outcomes Through Disciplined Operations and Strategic Excellence"
+        </div>
+    </div>
+</body>
+</html>

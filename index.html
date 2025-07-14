@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy Camp - Professional Bio | Energy Trading & Finance Executive</title>
     <meta name="description" content="Andy Camp - Accomplished CFO/COO with 15+ years in energy trading. Proven track record of 880% income growth and $2B revenue generation.">
+    <meta name="keywords" content="Andy Camp, CFO, COO, Energy Trading, Finance Executive, Chemical Engineering, Commodity Trading">
+    <meta name="author" content="Andy Camp">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andycampbio.com/">
+    <meta property="og:title" content="Andy Camp - Professional Bio">
+    <meta property="og:description" content="Accomplished finance and operations executive with 15+ years of experience driving exceptional growth in energy trading.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://andycampbio.com/">
+    <meta property="twitter:title" content="Andy Camp - Professional Bio">
+    <meta property="twitter:description" content="Accomplished finance and operations executive with 15+ years of experience driving exceptional growth in energy trading.">
+    
     <style>
         * {
             margin: 0;
@@ -15,8 +30,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            background: #000000;
             min-height: 100vh;
         }
 
@@ -27,63 +42,95 @@
         }
 
         .profile-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(20, 20, 20, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid #8c9297;
+            box-shadow: 0 20px 40px rgba(140, 146, 151, 0.2);
             overflow: hidden;
             transition: transform 0.3s ease;
         }
 
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(140, 146, 151, 0.3);
+        }
+
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
             position: relative;
+            border-bottom: 2px solid #8c9297;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(140,146,151,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(140,146,151,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(140,146,151,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
         }
 
         .profile-image {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 4px solid #8c9297;
             margin: 0 auto 1rem;
-            background: linear-gradient(45deg, #f39c12, #e74c3c);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-            font-weight: bold;
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAB4AHgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAP');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(140, 146, 151, 0.3);
         }
 
         .name {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .title {
             font-size: 1.2rem;
             opacity: 0.9;
             font-weight: 300;
+            position: relative;
+            z-index: 1;
+            color: #8c9297;
         }
 
         .content {
             padding: 2rem;
+            background: #000000;
         }
 
         .section {
             margin-bottom: 2rem;
             padding: 1.5rem;
             border-radius: 12px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-left: 4px solid #667eea;
+            background: rgba(20, 20, 20, 0.8);
+            border: 2px solid #8c9297;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(140, 146, 151, 0.2);
+            border-color: #a8aeb3;
         }
 
         .section h3 {
-            color: #2c3e50;
+            color: #ffffff;
             font-size: 1.3rem;
             margin-bottom: 1rem;
             display: flex;
@@ -92,40 +139,143 @@
         }
 
         .section-icon {
-            width: 20px;
-            height: 20px;
-            background: #667eea;
+            width: 8px;
+            height: 8px;
+            background: #8c9297;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .section-content {
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .section-content strong {
+            color: #8c9297;
+            font-weight: 600;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
             margin-top: 1rem;
+            justify-content: space-between;
         }
 
         .contact-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
         }
 
         .contact-label {
             font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+            color: #8c9297;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
         }
 
         .contact-value {
-            color: #667eea;
+            color: #ffffff;
             font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .contact-value a {
+            color: #8c9297;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #a8aeb3;
+            text-decoration: underline;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #8c9297 0%, #6a7075 100%);
+            color: #000000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 5px 15px rgba(140, 146, 151, 0.3);
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(140, 146, 151, 0.4);
+            background: linear-gradient(135deg, #a8aeb3 0%, #8c9297 100%);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(20, 20, 20, 0.8);
+            color: #8c9297;
+            margin-top: 2rem;
+            border-radius: 12px;
+            border: 2px solid #8c9297;
+        }
+
+        /* Achievement highlights */
+        .achievement-highlight {
+            background: rgba(140, 146, 151, 0.1);
+            border-left: 4px solid #8c9297;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 4px;
+        }
+
+        /* Expertise badges */
+        .expertise-item {
+            display: inline-block;
+            background: rgba(140, 146, 151, 0.2);
+            color: #8c9297;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #8c9297;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .profile-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+            
+            .section {
+                border: 1px solid #ccc;
+                background: white;
+            }
         }
 
         @media (max-width: 768px) {
@@ -140,14 +290,23 @@
             .name {
                 font-size: 2rem;
             }
+            
+            .contact-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-item {
+                min-width: auto;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="profile-card">
-            <div class="header">
-                <div class="profile-image">AC</div>
+                            <div class="header">
+                <div class="profile-image"></div>
                 <h1 class="name">Andy Camp</h1>
                 <p class="title">Chief Finance Officer & Chief Operating Officer</p>
             </div>
@@ -155,107 +314,159 @@
             <div class="content">
                 <div class="section">
                     <h3>
-                        <span class="section-icon">👤</span>
+                        <span class="section-icon"></span>
                         Professional Summary
                     </h3>
-                    <div>
-                        Accomplished finance and operations executive with 15+ years of experience driving exceptional growth in energy trading and supply chain management. Proven track record of transforming businesses, including achieving 880% income growth and leading teams that generated over $2B in revenue. Chemical engineering background combined with deep financial expertise in commodity trading, asset optimization, and operational excellence.
+                    <div class="section-content">
+                        Accomplished finance and operations executive with 15+ years of experience driving exceptional growth in energy trading and supply chain management. Proven track record of transforming businesses, including achieving <strong>880% income growth</strong> and leading teams that generated over <strong>$2B in revenue</strong>. Chemical engineering background combined with deep financial expertise in commodity trading, asset optimization, and operational excellence.
                     </div>
                 </div>
 
                 <div class="section">
                     <h3>
-                        <span class="section-icon">🎯</span>
-                        Core Expertise
-                    </h3>
-                    <div>
-                        <strong>Financial Leadership & Strategy</strong> • <strong>Commodity Trading & Risk Management</strong> • <strong>Asset Optimization & Economics</strong> • <strong>Operational Excellence & Process Improvement</strong> • <strong>Team Leadership & Scaling Organizations</strong> • <strong>Chemical Engineering & Technical Analysis</strong> • <strong>Global Supply Chain Management</strong> • <strong>Contract Negotiation & Credit Management</strong> • <strong>Business Development & Revenue Growth</strong> • <strong>Blending & Refining Operations</strong>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h3>
-                        <span class="section-icon">💼</span>
+                        <span class="section-icon"></span>
                         Professional Experience
                     </h3>
-                    <div>
+                    <div class="section-content">
                         <p><strong>Chief Finance Officer / Chief Operating Officer - Proteus Supply</strong><br>
                         Led financial operations and achieved profitability within first year of operations.</p>
                         
                         <p><strong>Chief Finance Officer / Chief Operating Officer - SA Services International</strong><br>
-                        Transformed company performance with 880% increase in income ($2.6M to $23M) over 2 consecutive years and secured 3x increase in credit line capacity.</p>
+                        Transformed company performance with <strong>880% increase in income ($2.6M to $23M)</strong> over 2 consecutive years and secured 3x increase in credit line capacity.</p>
                         
                         <p><strong>Lead Trader / COO - Tethys (2013-2020)</strong><br>
-                        Managed $2B in revenue over 2 years while leading 3x staff expansion. Secured $1B credit line and $1.5B in contract revenue. Developed innovative diesel export trading program and gasoline blending program generating over $6M EBITDA. Managed $45M credit line for blending operations.</p>
+                        Managed <strong>$2B in revenue</strong> over 2 years while leading 3x staff expansion. Secured <strong>$1B credit line</strong> and <strong>$1.5B in contract revenue</strong>. Developed innovative diesel export trading program and gasoline blending program generating over <strong>$6M EBITDA</strong>. Managed $45M credit line for blending operations.</p>
                         
                         <p><strong>Lead Asset Economist - BP (2009-2012)</strong><br>
-                        Developed groundbreaking blending model for global distillates achieving record 20¢/gallon profit margin. Created chartering optimization models for direct ship chartering operations.</p>
+                        Developed groundbreaking blending model for global distillates achieving record <strong>20¢/gallon profit margin</strong>. Created chartering optimization models for direct ship chartering operations.</p>
                     </div>
                 </div>
 
                 <div class="section">
                     <h3>
-                        <span class="section-icon">🎓</span>
+                        <span class="section-icon"></span>
+                        Core Expertise
+                    </h3>
+                    <div class="section-content">
+                        <span class="expertise-item">Financial Leadership & Strategy</span>
+                        <span class="expertise-item">Commodity Trading & Risk Management</span>
+                        <span class="expertise-item">Asset Optimization & Economics</span>
+                        <span class="expertise-item">Operational Excellence</span>
+                        <span class="expertise-item">Team Leadership & Scaling</span>
+                        <span class="expertise-item">Chemical Engineering</span>
+                        <span class="expertise-item">Global Supply Chain Management</span>
+                        <span class="expertise-item">Contract Negotiation</span>
+                        <span class="expertise-item">Business Development</span>
+                        <span class="expertise-item">Blending & Refining Operations</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>
+                        <span class="section-icon"></span>
                         Education & Certifications
                     </h3>
-                    <div>
+                    <div class="section-content">
                         <p><strong>Bachelor of Science in Chemical Engineering</strong><br>
                         Minor in Technology & Management<br>
                         University of Illinois Urbana-Champaign</p>
-                        
-                        <p><strong>Entrepreneurial Experience</strong><br>
-                        Founded and operated Green Roofing Company, generating $15K in revenue</p>
                     </div>
                 </div>
 
                 <div class="section">
                     <h3>
-                        <span class="section-icon">🏆</span>
+                        <span class="section-icon"></span>
                         Key Achievements
                     </h3>
-                    <div>
-                        <p><strong>Record-Breaking Profit Margins:</strong> Developed blending model achieving 20¢/gallon profit margin at BP - a company record</p>
+                    <div class="section-content">
+                        <div class="achievement-highlight">
+                            <p><strong>Record-Breaking Profit Margins:</strong> Developed blending model achieving 20¢/gallon profit margin at BP - a company record</p>
+                        </div>
                         
-                        <p><strong>Exceptional Revenue Growth:</strong> Led $2B in revenue generation over 2 years at Tethys with strategic team expansion</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Exceptional Revenue Growth:</strong> Led $2B in revenue generation over 2 years at Tethys with strategic team expansion</p>
+                        </div>
                         
-                        <p><strong>Transformational Business Growth:</strong> Achieved 880% income increase ($2.6M to $23M) at SA Services International</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Transformational Business Growth:</strong> Achieved 880% income increase ($2.6M to $23M) at SA Services International</p>
+                        </div>
                         
-                        <p><strong>Credit Line Expansion:</strong> Secured $1B credit line and $1.5B in contract revenue at Tethys</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Credit Line Expansion:</strong> Secured $1B credit line and $1.5B in contract revenue at Tethys</p>
+                        </div>
                         
-                        <p><strong>Program Development:</strong> Created gasoline blending program generating $6M+ EBITDA</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Program Development:</strong> Created gasoline blending program generating $6M+ EBITDA</p>
+                        </div>
                         
-                        <p><strong>Rapid Profitability:</strong> Achieved profitability within 1 year at Proteus Supply</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Rapid Profitability:</strong> Achieved profitability within 1 year at Proteus Supply</p>
+                        </div>
                         
-                        <p><strong>Innovation in Trading:</strong> Developed diesel export trading program and optimization models for ship chartering</p>
+                        <div class="achievement-highlight">
+                            <p><strong>Innovation in Trading:</strong> Developed diesel export trading program and optimization models for ship chartering</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="section">
                     <h3>
-                        <span class="section-icon">📞</span>
+                        <span class="section-icon"></span>
                         Contact Information
                     </h3>
                     <div class="contact-grid">
                         <div class="contact-item">
                             <div class="contact-label">Email</div>
-                            <div class="contact-value">andy@andycampbio.com</div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-label">Phone</div>
-                            <div class="contact-value">(555) 123-4567</div>
+                            <div class="contact-value"><a href="mailto:Andy@SwiftMiningResources.com">Andy@SwiftMiningResources.com</a></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-label">LinkedIn</div>
-                            <div class="contact-value">linkedin.com/in/andycamp</div>
+                            <div class="contact-value"><a href="https://linkedin.com/in/andycamp7" target="_blank">linkedin.com/in/andycamp7</a></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-label">Location</div>
-                            <div class="contact-value">Available for Travel</div>
+                            <div class="contact-value">Austin, Texas</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Andy Camp. All rights reserved.</p>
+        </div>
     </div>
+
+    <script>
+        // Simple analytics tracking (replace with your analytics code)
+        console.log('Andy Camp Bio Site Loaded - Black Theme');
+        
+        // Print functionality
+        function printResume() {
+            window.print();
+        }
+        
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add subtle animation on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
